@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "506bc4d2-47e6-4da6-a073-90fb09ac4032",
+		"name": "SalesPortal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ProductsFuntion",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "8a2ff55f2031409486e1aaf5429b58e7",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://apim-salesportal.azure-api.net/salesportal/ProductsFuntion",
+					"protocol": "https",
+					"host": [
+						"apim-salesportal",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"salesportal",
+						"ProductsFuntion"
+					]
+				},
+				"description": "Available Porducts"
+			},
+			"response": []
+		},
+		{
+			"name": "SalesTaxesFunction",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "8a2ff55f2031409486e1aaf5429b58e7",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"items\":[\n        {\"productId\":6, \"quantity\": 1},\n        {\"productId\":7, \"quantity\": 1},\n        {\"productId\":8, \"quantity\": 1},\n        {\"productId\":9, \"quantity\": 1},\n        {\"productId\":9, \"quantity\": 1}\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apim-salesportal.azure-api.net/salesportal/SalesTaxesFunction",
+					"protocol": "https",
+					"host": [
+						"apim-salesportal",
+						"azure-api",
+						"net"
+					],
+					"path": [
+						"salesportal",
+						"SalesTaxesFunction"
+					]
+				},
+				"description": "Calculates the taxes based on an array of items"
+			},
+			"response": []
+		}
+	]
+}
